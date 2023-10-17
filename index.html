@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet" />
+  <title>Calendario Ragazzi</title>
+</head>
+
+<body>
+  <div class="container">
+  <span class="home" id="a-home"></span>
+<!--      =====    NAV  ==================================================== -->
+  <nav class="nav">
+
+    <div class="web-menu">
+      <div class="bx bx-planet web"></div>
+      <div class="web-links">
+
+        <a href="https://oficinavirtual.aguasbonaerenses.com.ar/login" onclick="window.open(this.href, 'Agua',
+'left=400,top=80,width=600,height=800,toolbar=1,resizable=0'); return false;" class="link">AGUA</a>
+        <a href="https://oficinavirtual.camuzzigas.com.ar/#/landing" onclick="window.open(this.href, 'Gas',
+'left=400,top=80,width=600,height=800,toolbar=1,resizable=0'); return false;" class="link">GAS</a>
+        <a href="https://sucursalvirtual.infoedes.com/" onclick="window.open(this.href, 'Luz',
+'left=400,top=80,width=600,height=800,toolbar=1,resizable=0'); return false;" class="link">LUZ</a>
+        <a href="https://www.bahia.gob.ar/apex/f?p=204:LOGIN_DESKTOP:6682295321921:::::" onclick="window.open(this.href, 'Muni',
+'left=400,top=80,width=600,height=800,toolbar=1,resizable=0'); return false;" class="link">MUNI</a>
+        <a href="https://app.arba.gov.ar/LiqPredet/InicioLiquidacion.do?imp=&Frame=NO&origen=WEB&url_volver=https%3A%2F%2Fwww%2Earba%2Egov%2Ear%2F" onclick="window.open(this.href, 'Rentas',
+'left=400,top=80,width=600,height=800,toolbar=1,resizable=0'); return false;" class="link">RENTAS</a>
+
+      </div>
+    </div>
+
+    <div class="anclas">
+      <input type="radio" name="radio" class="radio radio1" checked>
+      <label for="radio" class="label label1">
+        <a class="a1" href="#a-home"></a>
+      </label>
+
+      <input type="radio" name="radio" class="radio radio2">
+      <label for="radio" class="label label2">
+        <a class="a2" href="#a-archivo"></a>
+      </label>
+    </div>
+
+    <span class="login-user">nombre</span>
+    <div class="bx bx-x logout-btn"></div>
+
+  </nav>
+
+<!--      =====    FORMULARIOS  ============================================ -->
+  <div class="intro-card">
+
+      <div class="hero-box">
+
+        <div class="hero-logo">
+            <button class="hero-btn"></button>
+        </div>
+
+        <div class="hero-text">
+          <h2 class="ragazzi">ragazzi</h2>
+          <h5 class="vaqueria">VAQUERIA</h5>
+        </div>
+      </div>
+
+      <div class="form-box">
+
+        <!--          LOGIN           -->
+        <div class="login-form-box">
+
+          <div class="head-box">
+            <h3 class="login-txt">login</h3>
+            <button class="change-to-reg-btn" id="change-to-reg-btn">
+            </button>
+          </div>
+
+          <form class="form" id="form-login">
+
+            <div class="input-box" id="login-mail-box">
+              <input type="text" class="input" id="login-mail-input"
+                     placeholder="a" required />
+              <i class="bx bx-envelope input-icon"></i>
+            </div>
+
+            <div class="input-box" id="login-pass-box">
+              <input type="password" class="input" id="login-pass-input"
+                     placeholder="a" required />
+              <i class="bx bx-lock-open-alt input-icon"></i>
+            </div>
+
+            <button class="submit-btn" id="login-submit" type="submit">
+              <svg class="check-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(138, 138, 138, 1);transform:scale(1.500000, 1.500000) ;msFilter:;"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
+            </button>
+            <p class="error"></p>
+          </form>
+
+        </div>
+
+
+
+        <!--              REGISTRAR            -->
+        <div class="reg-form-box">
+
+          <div class="head-box">
+            <button class="change-to-login-btn" id="change-to-login-btn">
+            </button>
+            <h3 class="registrar-txt">registrar</h3>
+          </div>
+
+          <form class="form" id="form-reg">
+
+
+            <div class="input-box" id="reg-mail-box">
+              <input type="text" class="input" id="reg-mail-input" placeholder="a" required />
+              <i class="bx bx-envelope input-icon"></i>
+            </div>
+
+            <div class="input-box" id="reg-pass-box">
+              <input type="password" class="input" id="reg-pass-input" placeholder="a" required />
+              <i class="bx bx-lock-open-alt input-icon"></i>
+            </div>
+
+            <button class="submit-btn" id="reg-submit" type="submit">
+              <svg class="check-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(138, 138, 138, 1);transform:scale(1.500000, 1.500000) ;msFilter:;"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>
+            </button>
+            <p class="error"></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  <div class="box">
+    <div class="izq">
+
+<!--      =====    GASTOS  ================================================== -->
+        <div class="gastos-box card">
+
+          <!--      =====    RAGAZZI  ==================================================== -->
+          <div class="form-box">
+            <form class="form" id="ragazzi-form">
+              <label class="label">RAGAZZI</label>
+              <div class="select-box">
+                <select class="select" id="ragazzi-slc" required></select>
+              </div>
+              <input class="monto" id="ragazzi-monto" type="number" placeholder="$ 0" required>
+              <input type="date" class="fecha" id="ragazzi-fecha">
+              <button class="submit-btn" id="ragazzi-submit">
+              <div class="boxicon bx bxs-right-arrow"></div>
+            </form>
+          </div>
+
+          <!--      =====    PATRICIOS  ==================================================== -->
+          <div class="form-box">
+            <form class="form" id="patricios-form">
+              <label class="label">PATRICIOS</label>
+              <div class="select-box">
+                <select class="select" id="patricios-slc" required></select>
+              </div>
+              <input class="monto" id="patricios-monto" type="number" placeholder="$ 0" required>
+              <input type="date" class="fecha" id="patricios-fecha">
+              <button class="submit-btn" id="patricios-submit">
+              <div class="boxicon bx bxs-right-arrow"></div>
+            </form>
+          </div>
+
+          <!--      =====    PALIHUE 0 ==================================================== -->
+          <div class="form-box">
+            <form class="form" id="palihue-form">
+              <label class="label">PALIHUE</label>
+              <div class="select-box">
+                <select class="select" id="palihue-slc" required></select>
+              </div>
+              <input class="monto" id="palihue-monto" type="number" placeholder="$ 0" required>
+              <input type="date" class="fecha" id="palihue-fecha">
+              <button class="submit-btn" id="palihue-submit">
+              <div class="boxicon bx bxs-right-arrow"></div>
+            </form>
+          </div>
+
+          <!--      =====    JMOLINA  ==================================================== -->
+          <div class="form-box">
+            <form class="form" id="jmolina-form">
+              <label class="label">JMOLINA</label>
+              <div class="select-box">
+                <select class="select" id="jmolina-slc"required></select>
+              </div>
+              <input class="monto" id="jmolina-monto" type="number" placeholder="$ 0"required>
+              <input type="date" class="fecha" id="jmolina-fecha">
+              <button class="submit-btn" id="jmolina-submit">
+              <div class="boxicon bx bxs-right-arrow"></div>
+            </form>
+          </div>
+
+          <!--      =====    VARIOS  ==================================================== -->
+          <div class="form-box">
+            <form class="form" id="varios-form">
+              <label class="label">VARIOS</label>
+              <div class="select-box">
+                <input type="text" id="varios-txt" required>
+              </div>
+              <input class="monto" id="varios-monto" type="number" placeholder="$ 0" required>
+              <input type="date" class="fecha" id="varios-fecha">
+              <button class="submit-btn">
+              <div class="boxicon bx bxs-right-arrow"></div>
+            </form>
+          </div>
+
+        </div>
+
+        <button class="reset-btn">RESET</button>
+
+  <!--      =====    TOTAL  ==================================================== -->
+      <div class="total-box">
+<!--     <h4 class="titulo">TOTAL</h4> -->
+    <div class="total-content">
+      <table class="total-tabla card">
+        <tbody class="total-resultado">
+          <tr>
+            <td colspan="3">TOTAL</td>
+            <td class="resultado"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+    </div>
+
+    <div class="der">
+  <!--      =====    ALMANAQUE  ==================================================== -->
+      <div class="almanaque-box">
+        <div class="almanaque-tablas">
+          <table class="almanaque-tabla-head tabla-head card">
+          <tr>
+              <th>Vencimiento</th>
+              <th>Sector</th>
+              <th>Rubro</th>
+              <th>Monto</th>
+              <th>Estado</th>
+            </tr>
+        </table>
+          <div class="almanaque-tabla-data-box">
+          <table class="almanaque-tabla-data tabla-data card" id="A01"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A02"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A03"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A04"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A05"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A06"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A07"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A08"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A09"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A10"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A11"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A12"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A13"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A14"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A15"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A16"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A17"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A18"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A19"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A20"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A21"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A22"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A23"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A24"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A25"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A26"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A27"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A28"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A29"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A30"></table>
+          <table class="almanaque-tabla-data tabla-data card" id="A31"></table>
+
+          <form class="form edit-form card" id="edit-form">
+            <label class="label edit-label"></label>
+            <input class="monto edit-monto" id="edit-monto" type="number" placeholder="$ 0" required>
+            <input type="date" class="fecha edit-fecha" id="edit-fecha" required>
+            <button class="edit-btn edit-submit" type="submit">OK</button>
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--      =====    ARCHIVO  ================================================= -->
+  <div class="archivo-box" id="a-archivo">
+
+<!--     <h4 class="titulo titulo-archivo">ARCHIVO</h4> -->
+    <div class="archivo-meses card"></div>
+    <div class="archivo-tablas">
+      <table class="archivo-tabla-head tabla-head card">
+            <tr>
+                <th>Vencimiento</th>
+                <th>Sector</th>
+                <th>Rubro</th>
+                <th>Monto</th>
+                <th>Pagado</th>
+              </tr>
+      </table>
+      <div class="archivo-tabla-data-box">
+        <table class="archivo-tabla-data tabla-data card" id="ar-1">
+          <tr> <th class="mes mes-1"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-2">
+          <tr> <th class="mes mes-2"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-3">
+          <tr> <th class="mes mes-3"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-4">
+          <tr> <th class="mes mes-4"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-5">
+          <tr> <th class="mes mes-5"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-6">
+          <tr> <th class="mes mes-6"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-7">
+          <tr> <th class="mes mes-7"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-8">
+          <tr> <th class="mes mes-8"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-9">
+          <tr> <th class="mes mes-9"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-10">
+          <tr> <th class="mes mes-10"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-11">
+          <tr> <th class="mes mes-11"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-12">
+          <tr> <th class="mes mes-12"></th> </tr>
+        </table>
+        <table class="archivo-tabla-data tabla-data card" id="ar-13">
+          <tr> <th class="mes mes-13"></th> </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--      =====    TEMPLATE  ================================================ -->
+<template id="tpl-linea">
+      <tr class="linea">
+<!--         <td class="check"><input class="checkbox" type="checkbox"></td> -->
+        <td class="check">
+          <input class="checkbox" type="checkbox">
+          <label class="chk-label" for=""></label>
+        </td>
+        <td class="fecha"></td>
+        <td class="sector"></td>
+        <td class="rubro"></td>
+        <td class="monto"></td>
+        <td class="pagado"></td>
+        <td class="check-remove">
+          <div class="bx bx-check-circle icon"></div>
+          <div class="bx bx-x-circle icon"></div>
+          <div class="bx bxs-pencil icon"></div>
+        </td>
+      </tr>
+</template>
+
+<!--      =====    FIREBASE  ================================================ -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+<script>
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyAWTufNWgssJ5ek1FZZXpXfDal4FoYOvu8",
+    authDomain: "pagos2-ragazzi-app.firebaseapp.com",
+    projectId: "pagos2-ragazzi-app",
+    storageBucket: "pagos2-ragazzi-app.appspot.com",
+    messagingSenderId: "350768129131",
+    appId: "1:350768129131:web:8f26fa3ffbc1c63f293d2e",
+    measurementId: "G-EFF2DQ0PES"
+  };
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+</script>
+
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
